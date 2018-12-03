@@ -1,5 +1,5 @@
 ﻿import os,shutil
-path=input('请输入文件路径(结尾不用加上/)：')+'/'
+path=input('请输入文件夹路径(结尾不用加上/)：')+'/'
 f=os.listdir(path)
 a=0;b=0;c=0;d=0;h=0
 e=len(f)
@@ -8,13 +8,13 @@ for i in f:
 	j=os.path.getsize(path+i)
 	d=d+1
 	if j > 1024*1024:
-		shutil.move(path+i,'T:/中转站大/'+i)
+		shutil.move(path+i,'T:/中转站大/需要自行更改，不能是不存在的文件夹'+i)
 		a=a+1
 	if 1024*1024 >= j > 100*1024:
-		shutil.move(path+i,'T:/中转站中/'+i)
+		shutil.move(path+i,'T:/中转站中/需要自行更改，不能是不存在的文件夹'+i)
 		b=b+1
 	if 100*1024 >= j > 10*1024:
-		shutil.move(path+i,'T:/中转站/'+i)
+		shutil.move(path+i,'T:/中转站/需要自行更改，不能是不存在的文件夹'+i)
 		c=c+1
 	if 10*1024 >= j:
 		os.unlink(path+i)
